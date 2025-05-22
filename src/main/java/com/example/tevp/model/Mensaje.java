@@ -1,10 +1,11 @@
 package com.example.tevp.model;
-//Mensajes internos
+
+// MENSAJES INTERNOS
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -13,7 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity
 @Table(name = "mensajes")
-public class msgint {
+public class Mensaje {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,11 +24,10 @@ public class msgint {
     @JoinColumn(name = "remitente_id")
     private Usuario remitente;
 
-    @ManyToMany
-    @JoinColumn(name = "destinario_id")
+    @ManyToOne
+    @JoinColumn(name = "destinatario_id")
     private Usuario destinatario;
 
     private String contenido;
     private LocalDateTime fechaEnvio;
-
 }
