@@ -12,7 +12,10 @@ import lombok.NoArgsConstructor;
 @Table(name = "productos")
 public class Producto {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String isbn;
     private String titulo;
     private int fechaPublicacion;
