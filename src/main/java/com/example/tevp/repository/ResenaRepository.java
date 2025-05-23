@@ -8,6 +8,6 @@ import java.util.List;
 @Repository
 public interface ResenaRepository extends JpaRepository<Resena, Long> {
 
-    List<Resena> findByProductoId(Long productoId);
+    List<Resena> findByProducto_Id(Long productoId);
 
 }

@@ -16,7 +16,7 @@ public class ResenaService {
     }
 
     public List<Resena> obtenerPorProducto(Long productoId) {
-        return resenaRepository.findByProductoId(productoId);
+        return resenaRepository.findByProducto_Id(productoId);
     }
 
     public List<Resena> obtenerTodas() {

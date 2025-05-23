@@ -23,6 +23,10 @@ public class Resena {
     @JoinColumn(name = "cliente_id")
     private Usuario cliente;
 
+    @ManyToOne
+    @JoinColumn(name = "producto_id")
+    private Producto producto;
+
     private int calificacion;
     private String comentario;
     private LocalDate fechaReseña;
