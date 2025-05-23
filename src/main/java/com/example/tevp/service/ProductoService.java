@@ -3,8 +3,8 @@ package com.example.tevp.service;
 import com.example.tevp.model.Producto;
 import com.example.tevp.repository.ProductoRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.cache.annotation.Cacheable;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductoService {
@@ -15,16 +15,11 @@ public class ProductoService {
         this.productoRepository = productoRepository;
     }
 
-    @Cacheable("productos")
-    public List<Producto> obtenerPorTitulo(String titulo) {
-        return productoRepository.findByTituloContaining(titulo);
+    public Optional<Producto> obtenerPorId(Long id) {
+        return productoRepository.findById(id);
     }
 
-    public List<Producto> obtenerTodos() {
-        return productoRepository.findAll();
-    }
-
-    public Producto guarduaProducto(Producto producto) {
+    public Producto guardarProducto(Producto producto) {
         return productoRepository.save(producto);
     }
 
@@ -32,4 +27,7 @@ public class ProductoService {
         productoRepository.deleteById(id);
     }
 
+    public List<Producto> obtenerPorTitulo(String titulo) {
+        return productoRepository.findByTituloContaining(titulo);
+    }
 }

@@ -9,27 +9,25 @@ import java.util.Optional;
 @Service
 public class PedidoService {
 
-    private final PedidoRepository PedidoRepository;
+    private final PedidoRepository pedidoRepository;
 
     public PedidoService(PedidoRepository pedidoRepository) {
-        this.PedidoRepository = pedidoRepository;
-    }
-
-    public List<Pedido> obtenerPorEstado(String estado) {
-        return PedidoRepository.findByEstado(estado);
-    }
-
-    public List<Pedido> obtenerTodos() {
-        return PedidoRepository.findAll();
+        this.pedidoRepository = pedidoRepository;
     }
 
     public Optional<Pedido> obtenerPorId(Long id) {
-        return PedidoRepository.findById(id);
+        return pedidoRepository.findById(id);
+    }
+
+    public List<Pedido> obtenerPorEstado(String estado) {
+        return pedidoRepository.findByEstado(estado);
     }
 
     public Pedido guardarPedido(Pedido pedido) {
-        return PedidoRepository.save(pedido);
-
+        return pedidoRepository.save(pedido);
     }
 
+    public void eliminarPedido(Long id) {
+        pedidoRepository.deleteById(id);
+    }
 }
