@@ -14,9 +14,15 @@ public class PedidoController {
     @Autowired
     private PedidoService pedidoService;
 
+    // Este endpoint obtiene TODOS los pedidos. Se activa con GET /pedido
     @GetMapping
     public List<Pedido> obtenerTodos() {
         return pedidoService.obtenerTodos();
+    }
+
+    @GetMapping(params = "usuarioId")
+    public List<Pedido> obtenerPorUsuarioId(@RequestParam Long usuarioId) {
+        return pedidoService.obtenerPorUsuarioId(usuarioId);
     }
 
     @GetMapping("/{id}")
