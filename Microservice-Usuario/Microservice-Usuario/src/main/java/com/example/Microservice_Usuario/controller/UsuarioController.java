@@ -37,7 +37,7 @@ public class UsuarioController {
     }
 
     // PUT: Actualizar un usuario completamente
-    @PutMapping("/{id}")
+    @PutMapping("/{id}") //Modifica / Actualiza , mapea peticiones de http
     public Usuario actualizar(@PathVariable Long id, @RequestBody Usuario usuario) {
         return usuarioService.actualizar(id, usuario);
     }
