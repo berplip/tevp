@@ -44,6 +44,10 @@ public class PedidoService {
         pedidoRepository.deleteById(id);
     }
 
+    public List<Pedido> obtenerPorUsuarioId(Long usuarioId) {
+        return pedidoRepository.findByUsuarioId(usuarioId);
+    }
+
     // Ejemplo de comunicación con Microservice-Usuario
     public UsuarioDTO obtenerUsuarioPorId(Long usuarioId) {
         String url = "http://localhost:8091/usuario/" + usuarioId;
