@@ -19,6 +19,7 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Faker faker = new Faker();
 
+        // Genera y guarda 20 usuarios falsos
         for (int i = 0; i < 20; i++) {
             Usuario usuario = new Usuario();
             usuario.setNombre(faker.name().fullName());
@@ -26,6 +27,6 @@ public class DataLoader implements CommandLineRunner {
             usuario.setContrasena(faker.lorem().word() + faker.number().digits(4));
             usuarioRepository.save(usuario);
         }
-        System.out.println("---- Base de datos de Usuarios inicializada con datos de Faker. ----");
+        System.out.println("--- Base de datos de Usuarios inicializada con 20 datos de Faker. ---");
     }
 }
