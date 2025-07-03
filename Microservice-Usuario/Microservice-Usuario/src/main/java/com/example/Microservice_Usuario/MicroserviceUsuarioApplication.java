@@ -1,4 +1,4 @@
-package com.example.Microservice_Usuario;
+ package com.example.Microservice_Usuario;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +11,7 @@ public class MicroserviceUsuarioApplication {
     public static void main(String[] args) {
         SpringApplication.run(MicroserviceUsuarioApplication.class, args);
     }
-
+    
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();

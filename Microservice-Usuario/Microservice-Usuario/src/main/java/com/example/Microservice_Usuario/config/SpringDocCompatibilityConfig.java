@@ -1,0 +1,1 @@
+// Archivo eliminado - configuración innecesaria
