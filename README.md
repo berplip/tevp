@@ -1,197 +1,97 @@
 Plataforma de E-commerce Basada en Microservicios
-¡Bienvenido a la Plataforma de E-commerce Basada en Microservicios! Este proyecto representa una solución de comercio electrónico moderna, robusta y altamente escalable, diseñada para ofrecer una experiencia de compra fluida y eficiente. Construida sobre una arquitectura de microservicios, cada componente opera de forma independiente, garantizando flexibilidad, resiliencia y facilidad de mantenimiento.
+¡Bienvenido al corazón de la innovación en comercio electrónico! Este repositorio alberga una Plataforma de E-commerce de última generación, construida sobre una robusta y escalable arquitectura de microservicios. Diseñada para satisfacer las demandas del mercado digital actual, nuestra solución ofrece una experiencia de compra fluida y eficiente, al tiempo que proporciona la flexibilidad y la resiliencia necesarias para un crecimiento sostenido.
 
 Visión General del Proyecto
-Nuestro objetivo es proporcionar una base sólida para cualquier negocio de e-commerce, desde pequeñas tiendas hasta grandes empresas, a través de un diseño modular que permite la evolución y el escalado de funcionalidades de manera desacoplada.
+Nuestro objetivo principal es establecer una base tecnológica sólida y adaptable para cualquier negocio de e-commerce, independientemente de su tamaño o complejidad. A través de un diseño modular y desacoplado, la plataforma permite la evolución independiente de cada funcionalidad, minimizando riesgos y acelerando el ciclo de desarrollo. Esto se traduce en un sistema ágil, fácil de mantener y con una alta capacidad de adaptación a los cambios del negocio y del mercado. Es la solución ideal para construir, expandir y operar tu tienda online con confianza y eficiencia.
 
 Arquitectura de Microservicios
-La plataforma está cuidadosamente segmentada en los siguientes microservicios, cada uno con responsabilidades claras y bien definidas:
+La plataforma se compone de un ecosistema de microservicios, cada uno encapsulando una funcionalidad de negocio específica y operando de manera autónoma. Esta segmentación estratégica maximiza la agilidad del equipo, la tolerancia a fallos y la escalabilidad de componentes individuales. A continuación, se detallan los microservicios principales que conforman nuestra arquitectura:
 
 Microservice-Usuario:
 
-Gestiona el registro, inicio de sesión, autenticación (JWT, OAuth2, etc.) y perfiles de usuario.
+Gestiona el ciclo de vida completo de los usuarios: registro, inicio de sesión, autenticación segura (soporte para JWT, OAuth2, etc.) y administración de perfiles detallados.
 
-Manejo de roles y permisos.
+Implementa un sistema granular de roles y permisos para controlar el acceso a funcionalidades.
 
 Microservice-Producto:
 
-Administra el catálogo de productos (CRUD de productos).
+Motor central para la gestión del catálogo de productos, permitiendo operaciones CRUD (Crear, Leer, Actualizar, Eliminar) eficientes.
 
-Control de inventario y disponibilidad de stock.
+Manejo inteligente del inventario y la disponibilidad de stock en tiempo real.
 
-Búsqueda y filtrado de productos.
+Ofrece capacidades avanzadas de búsqueda y filtrado para una navegación intuitiva del catálogo.
 
 Microservice-Carrito:
 
-Maneja la lógica del carrito de compras (añadir, actualizar, eliminar productos del carrito).
+Orquesta la lógica del carrito de compras, facilitando la adición, actualización y eliminación de productos.
 
-Persistencia del carrito de usuario.
+Garantiza la persistencia del carrito, permitiendo a los usuarios retomar su compra en cualquier momento.
 
 Microservice-Pedido:
 
-Gestiona el ciclo de vida completo de un pedido (creación, actualización de estado, cancelación).
+Supervisa y gestiona el ciclo de vida integral de un pedido, desde su creación hasta su cumplimiento, incluyendo actualizaciones de estado y cancelaciones.
 
-Integración con los microservicios de Producto, Carrito y Pago.
+Coordina la integración fluida con los microservicios de Producto, Carrito y Pago para una experiencia de compra unificada.
 
 Microservice-Pago:
 
-Procesa las transacciones de pago de forma segura.
+Procesa las transacciones de pago de forma segura y confiable, priorizando la protección de datos sensibles.
 
-Integración con diversas pasarelas de pago (ej. Stripe, PayPal).
+Permite la integración con diversas pasarelas de pago líderes en el mercado (ej. Stripe, PayPal) para ofrecer múltiples opciones.
 
-Gestión de reembolsos y estados de pago.
+Gestiona eficientemente los reembolsos y los diferentes estados de las transacciones de pago.
 
 Microservice-Descuento:
 
-Aplica y valida códigos de descuento y promociones.
+Aplica y valida códigos de descuento, promociones y ofertas especiales.
 
-Gestión de reglas de descuento (porcentaje, monto fijo, por producto, etc.).
+Implementa un motor flexible para la gestión de reglas de descuento (porcentaje, monto fijo, por producto, etc.).
 
 Microservice-Resena:
 
-Permite a los usuarios dejar reseñas y calificaciones para los productos.
+Facilita la interacción del usuario al permitir la publicación de reseñas y calificaciones de productos.
 
-Cálculo de puntuaciones promedio de productos.
+Calcula y agrega puntuaciones promedio, ofreciendo información valiosa a otros compradores.
 
 Microservice-Notificacion:
 
-Envía notificaciones a los usuarios a través de diferentes canales (correo electrónico, SMS, push).
+Sistema centralizado para el envío de notificaciones a los usuarios a través de múltiples canales (correo electrónico, SMS, notificaciones push).
 
-Ejemplos: confirmación de pedido, actualizaciones de envío, alertas de stock.
+Ejemplos: confirmaciones de pedido, actualizaciones de envío, alertas de stock, promociones personalizadas.
 
 Microservice-Mensaje:
 
-Facilita la comunicación interna entre servicios.
+Proporciona una infraestructura robusta para la comunicación interna entre servicios, esencial para la orquestación de flujos de trabajo complejos.
 
-Puede ser utilizado para un sistema de mensajería interna o para la comunicación con el cliente (ej. mensajes de soporte).
+Potencialmente extensible para un sistema de mensajería directa con el cliente o para mensajes del sistema.
 
 Microservice-SoporteOnline:
 
-Proporciona funcionalidades de chat en tiempo real para soporte al cliente.
+Ofrece funcionalidades de chat en tiempo real para soporte al cliente, mejorando la satisfacción y la resolución de problemas.
 
-Integración con agentes de soporte o chatbots.
+Diseñado para una fácil integración con agentes de soporte humanos o chatbots inteligentes.
 
 Tecnologías Clave
-Este proyecto aprovecha un conjunto de tecnologías modernas para garantizar un rendimiento óptimo, escalabilidad y facilidad de desarrollo:
+Este proyecto se apoya en un conjunto de tecnologías de vanguardia, seleccionadas por su robustez, rendimiento, escalabilidad y la vasta comunidad de soporte que las respalda. Esta pila tecnológica garantiza una base sólida para el desarrollo y la operación a largo plazo:
 
-Backend: Java 17+, Spring Boot 3.x
+Backend: Java 17+, Spring Boot 3.x (El framework líder para el desarrollo de microservicios en Java).
 
 Base de Datos:
 
-H2 Database (para desarrollo y pruebas, base de datos en memoria).
+H2 Database: Ideal para desarrollo y pruebas, proporcionando una base de datos en memoria ligera y rápida.
 
-PostgreSQL (recomendado para entornos de producción, base de datos relacional robusta).
+PostgreSQL: Recomendado para entornos de producción, una base de datos relacional potente, de código abierto y altamente confiable.
 
-Control de Versiones: Git
+Control de Versiones: Git (El estándar de la industria para el seguimiento de cambios y la colaboración en código).
 
-Gestión de Dependencias: Apache Maven
+Gestión de Dependencias: Apache Maven (Herramienta fundamental para la gestión del ciclo de vida del proyecto y sus dependencias).
 
-Documentación de API: Swagger/OpenAPI (para una documentación interactiva y auto-generada de las APIs REST).
+Documentación de API: Swagger/OpenAPI (Para una documentación interactiva, auto-generada y fácil de consumir de todas las APIs REST).
 
-Descubrimiento de Servicios: Spring Cloud Eureka (para el registro y descubrimiento de microservicios).
+Descubrimiento de Servicios: Spring Cloud Eureka (Un servidor de descubrimiento de servicios que permite a los microservicios registrarse y encontrarse entre sí dinámicamente).
 
-Balanceo de Carga del Lado del Cliente: Spring Cloud Ribbon (para distribuir las solicitudes entre instancias de servicio).
+Balanceo de Carga del Lado del Cliente: Spring Cloud Ribbon (Para distribuir las solicitudes salientes entre múltiples instancias de un servicio).
 
-API Gateway: Spring Cloud Gateway (para enrutamiento, seguridad, monitoreo y balanceo de carga de las solicitudes externas).
+API Gateway: Spring Cloud Gateway (Un potente API Gateway para enrutamiento inteligente, seguridad, monitoreo y balanceo de carga de las solicitudes externas hacia los microservicios internos).
 
-Comunicación Inter-Servicios: RESTful APIs, posiblemente con la adición de un Message Broker (ej. Apache Kafka, RabbitMQ) para comunicación asíncrona y basada en eventos.
-
-Configuración y Ejecución Local
-Para poner en marcha esta plataforma de microservicios en tu entorno de desarrollo local, sigue las siguientes instrucciones:
-
-Requisitos Previos:
-
-Java Development Kit (JDK) 17 o superior.
-
-Apache Maven 3.6 o superior.
-
-Git instalado.
-
-Un IDE (IntelliJ IDEA, VS Code, Eclipse) con soporte para Spring Boot y Maven.
-
-(Opcional) Docker y Docker Compose para orquestación de servicios.
-
-(Opcional) Una instancia de PostgreSQL si deseas usar una base de datos persistente.
-
-Clonar el Repositorio:
-Abre tu terminal o línea de comandos y ejecuta:
-
-git clone https://github.com/tu-usuario/nombre-de-tu-repositorio.git
-cd nombre-de-tu-repositorio
-
-Asegúrate de reemplazar tu-usuario con tu nombre de usuario de GitHub y nombre-de-tu-repositorio con el nombre real de tu repositorio.
-
-Configuración de la Base de Datos (Opcional: PostgreSQL):
-Por defecto, cada microservicio utiliza H2 (base de datos en memoria) para facilitar el desarrollo y las pruebas. Para configurar PostgreSQL, sigue estos pasos:
-
-Asegúrate de tener una instancia de PostgreSQL ejecutándose localmente (ej. en localhost:5432).
-
-Crea una base de datos para cada microservicio o una base de datos centralizada según tu diseño.
-
-Actualiza el archivo src/main/resources/application.properties (o application-dev.properties) de cada microservicio con las credenciales de tu base de datos PostgreSQL:
-
-spring.datasource.url=jdbc:postgresql://localhost:5432/nombre_de_tu_db
-spring.datasource.username=tu_usuario_postgres
-spring.datasource.password=tu_password_postgres
-spring.jpa.hibernate.ddl-auto=update # 'update' para crear/actualizar esquema, 'none' para no hacer nada
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
-
-Compilar los Microservicios:
-Desde el directorio raíz del proyecto (nombre-de-tu-repositorio), puedes compilar todos los microservicios si tienes un pom.xml padre (multi-módulo):
-
-mvn clean install
-
-Si no tienes un pom.xml padre, deberás navegar a la carpeta de cada microservicio y compilarlo individualmente:
-
-cd Microservice-Usuario
-mvn clean install
-cd ../Microservice-Producto
-mvn clean install
-# Repite este paso para cada microservicio restante.
-
-Ejecutar los Microservicios:
-Es crucial iniciar los microservicios en un orden específico, comenzando por los servicios de infraestructura (como Eureka Server, si lo implementas). Luego, inicia los microservicios de negocio.
-Desde la carpeta de cada microservicio, ejecuta el JAR generado:
-
-cd Microservice-Usuario
-java -jar target/Microservice-Usuario-0.0.1-SNAPSHOT.jar
-# Repite para cada microservicio. Abre una nueva terminal para cada uno.
-
-Nota: Los puertos por defecto y las dependencias de servicio a servicio se configurarán en los archivos application.properties de cada microservicio. Asegúrate de que no haya conflictos de puertos si los ejecutas todos localmente.
-
-Endpoints Principales (Ejemplos)
-Una vez que los microservicios estén en ejecución, puedes acceder a sus APIs. Aquí algunos ejemplos de endpoints comunes (los puertos pueden variar según tu configuración):
-
-Microservice-Usuario: http://localhost:8080/api/users
-
-Microservice-Producto: http://localhost:8081/api/products
-
-Microservice-Carrito: http://localhost:8082/api/cart
-
-Documentación Swagger UI (para cada servicio): http://localhost:8080/swagger-ui.html (reemplaza 8080 con el puerto de cada servicio).
-
-Contribución
-¡Las contribuciones son el corazón de los proyectos de código abierto! Si estás interesado en mejorar esta plataforma, te animamos a contribuir. Por favor, sigue nuestras directrices:
-
-Haz un "fork" de este repositorio a tu cuenta de GitHub.
-
-Clona tu "fork" localmente: git clone https://github.com/tu-usuario/nombre-de-tu-repositorio.git
-
-Crea una nueva rama para tu característica o corrección: git checkout -b feature/nombre-de-tu-caracteristica o git checkout -b bugfix/descripcion-del-bug
-
-Realiza tus cambios, asegurándote de seguir las convenciones de código y los estándares de calidad.
-
-Haz commits con mensajes claros y descriptivos, siguiendo la convención de commits (ej. feat: Añadir funcionalidad X, fix: Corregir bug Y).
-
-Sube tu rama a tu repositorio remoto: git push origin feature/nombre-de-tu-caracteristica
-
-Abre un Pull Request (PR) a la rama main (o develop, si aplica) de este repositorio. Proporciona una descripción detallada de tus cambios y las pruebas realizadas.
-
-Licencia
-Este proyecto está distribuido bajo la licencia [Nombre de la Licencia, ej. MIT License]. Consulta el archivo LICENSE en la raíz del repositorio para más detalles sobre los términos de uso y distribución.
-
-Contacto
-Para preguntas, sugerencias o colaboraciones, no dudes en abrir un "Issue" en este repositorio o contactar al mantenedor del proyecto.
-
-¡Gracias por explorar nuestra Plataforma de E-commerce Basada en Microservicios!
-Esperamos que te sea útil y te inspire a construir soluciones de comercio electrónico innovadoras.
+Comunicación Inter-Servicios: RESTful APIs (Protocolo estándar para la comunicación síncrona entre servicios), con la flexibilidad para integrar un Message Broker (ej. Apache Kafka, RabbitMQ) para patrones de comunicación asíncronos y basados en eventos.
