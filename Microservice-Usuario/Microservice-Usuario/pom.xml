@@ -113,7 +113,7 @@
 			<scope>runtime</scope>
 		</dependency>
 		
-		<!-- Swagger/OpenAPI para documentación de API -->
+		<!-- swg / d -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>

@@ -15,33 +15,33 @@ import io.swagger.v3.oas.models.tags.Tag;
 @Configuration
 public class SwaggerConfig {
 
-    @Bean
-    public OpenAPI customOpenAPI() {
-        return new OpenAPI()
-                .info(new Info()
-                        .title("Microservicio de Usuarios API")
-                        .description("API REST para la gestión de usuarios en el sistema de microservicios")
-                        .version("1.0.0")
-                        .contact(new Contact()
-                                .name("Equipo de Desarrollo")
-                                .email("desarrollo@empresa.com")
-                                .url("https://empresa.com"))
-                        .license(new License()
-                                .name("MIT License")
-                                .url("https://opensource.org/licenses/MIT")))
-                .servers(List.of(
-                        new Server()
-                                .url("http://localhost:8082")
-                                .description("Servidor de Desarrollo"),
-                        new Server()
-                                .url("http://localhost:8083")
-                                .description("Servidor de Testing")))
-                .tags(List.of(
-                        new Tag()
-                                .name("Usuarios")
-                                .description("Operaciones relacionadas con la gestión de usuarios"),
-                        new Tag()
-                                .name("Usuarios V2")
-                                .description("Operaciones relacionadas con la gestión de usuarios avanzadas")));
-    }
+        @Bean
+        public OpenAPI customOpenAPI() {
+                return new OpenAPI()
+                                .info(new Info()
+                                                .title("Microservicio de Usuarios API")
+                                                .description("API REST para la gestión de usuarios en el sistema de microservicios")
+                                                .version("1.0.0")
+                                                .contact(new Contact()
+                                                                .name("Equipo de Desarrollo")
+                                                                .email("desarrollo@empresa.com")
+                                                                .url("https://empresa.com"))
+                                                .license(new License()
+                                                                .name("MIT License")
+                                                                .url("https://opensource.org/licenses/MIT")))
+                                .servers(List.of(
+                                                new Server()
+                                                                .url("http://localhost:8082")
+                                                                .description("Servidor de Desarrollo"),
+                                                new Server()
+                                                                .url("http://localhost:8083")
+                                                                .description("Servidor de Testing")))
+                                .tags(List.of(
+                                                new Tag()
+                                                                .name("Usuarios")
+                                                                .description("Operaciones relacionadas con la gestión de usuarios"),
+                                                new Tag()
+                                                                .name("Usuarios V2")
+                                                                .description("Operaciones relacionadas con la gestión de usuarios avanzadas")));
+        }
 }

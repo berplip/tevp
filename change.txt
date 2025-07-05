@@ -1,2 +1,0 @@
-Se añadio Data Faker #2
-Se intenta añadir la prueba unitaria
